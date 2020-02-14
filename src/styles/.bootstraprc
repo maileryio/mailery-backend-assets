@@ -1,0 +1,65 @@
+---
+bootstrapVersion: 4
+
+extractStyles: true
+
+styleLoaders:
+  - css-loader
+  - sass-loader
+  - postcss-loader
+
+preBootstrapCustomizations: ./bootstrap/pre-customizations.scss
+
+bootstrapCustomizations: ./bootstrap/customizations.scss
+
+appStyles: ./styles.scss
+
+### Bootstrap styles
+styles:
+
+  # Mixins
+  mixins: true
+
+  # Reset and dependencies
+  print: true
+
+  # Core CSS
+  buttons: true
+  code: true
+  forms: true
+  grid: true
+  images: true
+  reboot: true
+  tables: true
+  type: true
+
+  # Components
+  alert: true
+  badge: true
+  breadcrumb: true
+  button-group: true
+  card: true
+  close: true
+  custom-forms: true
+  dropdown: true
+  input-group: true
+  jumbotron: true
+  list-group: true
+  media: true
+  nav: true
+  navbar: true
+  pagination: true
+  progress: true
+  transitions: true
+
+  # Components w/ JavaScript
+  carousel: true
+  modal: true
+  popover: true
+  tooltip: true
+
+  # Utility classes
+  utilities: true
+
+### Bootstrap scripts
+scripts: false

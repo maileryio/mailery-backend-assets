@@ -1,0 +1,17 @@
+.pulse-danger {
+    background: $danger;
+    box-shadow: 0 0 0 rgba($danger, .4);
+    animation: pulseDanger 2s infinite;
+}
+
+@include keyframes(pulseDanger) {
+    0% {
+        box-shadow: 0 0 0 0 rgba($danger, .4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba($danger, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba($danger, 0);
+    }
+}

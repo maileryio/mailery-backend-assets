@@ -6,7 +6,7 @@ import { eslint } from 'rollup-plugin-eslint';
 export default {
   input: 'src/index.js',
   output: {
-    name: 'VueWidgetLink',
+    name: '_____',
     exports: 'named'
   },
   plugins: [
