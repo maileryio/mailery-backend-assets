@@ -6,7 +6,7 @@ export default () => {
   if (process.env.NODE_ENV === 'production') {
     Sentry.init({
       dsn: process.env.SENTRY_DSN,
-      integrations: [new Integrations.Vue({ Vue, attachProps: true })],
+      integrations: [new Integrations.Vue({ Vue, attachProps: true })]
     });
   }
 };

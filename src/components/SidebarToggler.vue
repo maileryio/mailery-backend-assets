@@ -1,6 +1,6 @@
 <template>
-  <button v-on:click="handleClick">
-    <slot></slot>
+  <button @click="handleClick">
+    <slot />
   </button>
 </template>
 
@@ -14,5 +14,5 @@
         handleClick: 'sidebar/toggle'
       })
     }
-  }
+  };
 </script>

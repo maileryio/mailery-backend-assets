@@ -5,9 +5,11 @@ import modules from './modules';
 
 Vue.use(Vuex);
 
+const isProd = process.env.NODE_ENV === 'production';
+
 const store = new Vuex.Store({
   modules,
-  strict: process.env.NODE_ENV !== 'production'
+  strict: !isProd
 });
 
 export default store;

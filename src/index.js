@@ -1,5 +1,3 @@
-import 'whatwg-fetch';
-import 'bootstrap.native/dist/bootstrap-native-v4';
 import Vue from 'vue';
 import store from './store';
 
@@ -8,8 +6,8 @@ import Navbar from './components/Navbar.vue';
 import Sidebar from './components/Sidebar.vue';
 import SidebarToggler from './components/SidebarToggler.vue';
 
-require('bootstrap-loader/lib/bootstrap.loader?configFilePath=' +
-  `${__dirname}/styles/.bootstraprc!bootstrap-loader/no-op.js`);
+// require('bootstrap-loader/lib/bootstrap.loader?configFilePath=' +
+//   `${__dirname}/styles/.bootstraprc!bootstrap-loader/no-op.js`);
 
 Vue.component(App.name, App);
 Vue.component(Navbar.name, Navbar);
