@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import Vuex, { mapGetters, mapMutations } from 'vuex';
+import BootstrapVue from 'bootstrap-vue';
 
 var support = {
   searchParams: 'URLSearchParams' in self,
@@ -841,8 +842,7 @@ __vue_render__$3._withStripped = true;
     undefined
   );
 
-// require('bootstrap-loader/lib/bootstrap.loader?configFilePath=' +
-//   `${__dirname}/styles/.bootstraprc!bootstrap-loader/no-op.js`);
+Vue.use(BootstrapVue);
 
 Vue.component(__vue_component__.name, __vue_component__);
 Vue.component(__vue_component__$1.name, __vue_component__$1);

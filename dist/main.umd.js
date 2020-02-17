@@ -1,11 +1,12 @@
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('vue'), require('vuex')) :
-  typeof define === 'function' && define.amd ? define(['exports', 'vue', 'vuex'], factory) :
-  (global = global || self, factory((global.mailery = global.mailery || {}, global.mailery.backend = {}), global.Vue, global.Vuex));
-}(this, (function (exports, Vue, Vuex) { 'use strict';
+  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('vue'), require('vuex'), require('bootstrap-vue')) :
+  typeof define === 'function' && define.amd ? define(['exports', 'vue', 'vuex', 'bootstrap-vue'], factory) :
+  (global = global || self, factory((global.Mailery = global.Mailery || {}, global.Mailery.Backend = {}), global.Vue, global.Vuex, global.BootstrapVue));
+}(this, (function (exports, Vue, Vuex, BootstrapVue) { 'use strict';
 
   Vue = Vue && Vue.hasOwnProperty('default') ? Vue['default'] : Vue;
   var Vuex__default = 'default' in Vuex ? Vuex['default'] : Vuex;
+  BootstrapVue = BootstrapVue && BootstrapVue.hasOwnProperty('default') ? BootstrapVue['default'] : BootstrapVue;
 
   var support = {
     searchParams: 'URLSearchParams' in self,
@@ -847,8 +848,7 @@
       undefined
     );
 
-  // require('bootstrap-loader/lib/bootstrap.loader?configFilePath=' +
-  //   `${__dirname}/styles/.bootstraprc!bootstrap-loader/no-op.js`);
+  Vue.use(BootstrapVue);
 
   Vue.component(__vue_component__.name, __vue_component__);
   Vue.component(__vue_component__$1.name, __vue_component__$1);

@@ -4,7 +4,9 @@ import buble from 'rollup-plugin-buble';
 import replace from 'rollup-plugin-replace';
 import resolve from 'rollup-plugin-node-resolve';
 import polyfill from 'rollup-plugin-polyfill';
+import postcss from 'rollup-plugin-postcss';
 import { eslint } from 'rollup-plugin-eslint';
+import autoprefixer from 'autoprefixer';
 
 const env = process.env.NODE_ENV || 'development';
 const isProd = env === 'production';
@@ -12,24 +14,22 @@ const isProd = env === 'production';
 export default (async () => ({
   input: 'src/index.js',
   output: {
-    name: 'mailery.backend',
+    name: 'Mailery.Backend',
     exports: 'named',
     sourcemap: true,
     globals: {
       'vue': 'Vue',
-      'vuex': 'Vuex'
+      'vuex': 'Vuex',
+      'bootstrap-vue': 'BootstrapVue',
     }
   },
   external: [
     'vue',
-    'vuex'
+    'vuex',
+    'bootstrap-vue'
   ],
   plugins: [
-    eslint({
-      exclude: [
-        'src/styles/**'
-      ]
-    }),
+    eslint(),
     commonjs(),
     resolve(),
     polyfill([
@@ -37,6 +37,17 @@ export default (async () => ({
     ]),
     replace({
       'process.env.NODE_ENV': JSON.stringify(env)
+    }),
+    postcss({
+      use: ['sass'],
+      extract: true,
+      modules: true,
+      minimize: isProd,
+      sourceMap: true,
+      plugins: [
+        autoprefixer()
+      ],
+      extract: 'dist/main.min.css'
     }),
     vue({
       css: true,
