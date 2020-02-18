@@ -40,8 +40,6 @@ export default (async () => ({
     }),
     postcss({
       use: ['sass'],
-      extract: true,
-      modules: true,
       minimize: isProd,
       sourceMap: true,
       plugins: [

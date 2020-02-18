@@ -1,6 +1,9 @@
+// custom variables
+@import 'variables.scss';
+
 // twitter bootstrap styles
 @import 'node_modules/bootstrap/scss/bootstrap.scss';
 @import 'node_modules/bootstrap-vue/src/index.scss';
 
 // custom styles
-@import 'variables.scss';
+@import 'layout.scss';
