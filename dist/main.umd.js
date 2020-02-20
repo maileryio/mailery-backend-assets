@@ -1,12 +1,12 @@
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('vue'), require('vuex'), require('bootstrap-vue')) :
-  typeof define === 'function' && define.amd ? define(['exports', 'vue', 'vuex', 'bootstrap-vue'], factory) :
-  (global = global || self, factory((global.Mailery = global.Mailery || {}, global.Mailery.Backend = {}), global.Vue, global.Vuex, global.BootstrapVue));
-}(this, (function (exports, Vue, Vuex, BootstrapVue) { 'use strict';
+  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('bootstrap-vue'), require('vue'), require('vuex')) :
+  typeof define === 'function' && define.amd ? define(['exports', 'bootstrap-vue', 'vue', 'vuex'], factory) :
+  (global = global || self, factory(global.mailery = {}, global.BootstrapVue, global.Vue, global.Vuex));
+}(this, (function (exports, BootstrapVue, Vue, Vuex) { 'use strict';
 
+  BootstrapVue = BootstrapVue && BootstrapVue.hasOwnProperty('default') ? BootstrapVue['default'] : BootstrapVue;
   Vue = Vue && Vue.hasOwnProperty('default') ? Vue['default'] : Vue;
   var Vuex__default = 'default' in Vuex ? Vuex['default'] : Vuex;
-  BootstrapVue = BootstrapVue && BootstrapVue.hasOwnProperty('default') ? BootstrapVue['default'] : BootstrapVue;
 
   var support = {
     searchParams: 'URLSearchParams' in self,
@@ -525,36 +525,6 @@
     self.Response = Response;
   }
 
-  var sidebar = {
-    namespaced: true,
-    state: {
-      opened: true
-    },
-    getters: {
-      isOpened: function isOpened(state) {
-        return !!state.opened;
-      }
-    },
-    mutations: {
-      toggle: function toggle(state) {
-        state.opened = !state.opened;
-      }
-    }
-  };
-
-  var modules = {
-    sidebar: sidebar
-  };
-
-  Vue.use(Vuex__default);
-
-  var isProd = "development" === 'production';
-
-  var store = new Vuex__default.Store({
-    modules: modules,
-    strict: !isProd
-  });
-
   //
 
   var script = {
@@ -686,176 +656,17 @@
       undefined
     );
 
-  //
-  //
-  //
-  //
-  //
-  //
+  Vue.use(Vuex__default);
 
-  var script$1 = {
-    name: 'navbar'
-  };
-
-  /* script */
-  var __vue_script__$1 = script$1;
-
-  /* template */
-  var __vue_render__$1 = function() {
-    var _vm = this;
-    var _h = _vm.$createElement;
-    var _c = _vm._self._c || _h;
-    return _c("div", [_vm._t("default")], 2)
-  };
-  var __vue_staticRenderFns__$1 = [];
-  __vue_render__$1._withStripped = true;
-
-    /* style */
-    var __vue_inject_styles__$1 = undefined;
-    /* scoped */
-    var __vue_scope_id__$1 = undefined;
-    /* module identifier */
-    var __vue_module_identifier__$1 = undefined;
-    /* functional template */
-    var __vue_is_functional_template__$1 = false;
-    /* style inject */
-    
-    /* style inject SSR */
-    
-    /* style inject shadow dom */
-    
-
-    
-    var __vue_component__$1 = normalizeComponent(
-      { render: __vue_render__$1, staticRenderFns: __vue_staticRenderFns__$1 },
-      __vue_inject_styles__$1,
-      __vue_script__$1,
-      __vue_scope_id__$1,
-      __vue_is_functional_template__$1,
-      __vue_module_identifier__$1,
-      false,
-      undefined,
-      undefined,
-      undefined
-    );
-
-  //
-  //
-  //
-  //
-  //
-  //
-
-  var script$2 = {
-    name: 'sidebar'
-  };
-
-  /* script */
-  var __vue_script__$2 = script$2;
-
-  /* template */
-  var __vue_render__$2 = function() {
-    var _vm = this;
-    var _h = _vm.$createElement;
-    var _c = _vm._self._c || _h;
-    return _c("div", [_vm._t("default")], 2)
-  };
-  var __vue_staticRenderFns__$2 = [];
-  __vue_render__$2._withStripped = true;
-
-    /* style */
-    var __vue_inject_styles__$2 = undefined;
-    /* scoped */
-    var __vue_scope_id__$2 = undefined;
-    /* module identifier */
-    var __vue_module_identifier__$2 = undefined;
-    /* functional template */
-    var __vue_is_functional_template__$2 = false;
-    /* style inject */
-    
-    /* style inject SSR */
-    
-    /* style inject shadow dom */
-    
-
-    
-    var __vue_component__$2 = normalizeComponent(
-      { render: __vue_render__$2, staticRenderFns: __vue_staticRenderFns__$2 },
-      __vue_inject_styles__$2,
-      __vue_script__$2,
-      __vue_scope_id__$2,
-      __vue_is_functional_template__$2,
-      __vue_module_identifier__$2,
-      false,
-      undefined,
-      undefined,
-      undefined
-    );
-
-  //
-
-  var script$3 = {
-    name: 'sidebar-toggler',
-    methods: Object.assign({}, Vuex.mapMutations({
-        handleClick: 'sidebar/toggle'
-      }))
-  };
-
-  /* script */
-  var __vue_script__$3 = script$3;
-
-  /* template */
-  var __vue_render__$3 = function() {
-    var _vm = this;
-    var _h = _vm.$createElement;
-    var _c = _vm._self._c || _h;
-    return _c(
-      "button",
-      { on: { click: _vm.handleClick } },
-      [_vm._t("default")],
-      2
-    )
-  };
-  var __vue_staticRenderFns__$3 = [];
-  __vue_render__$3._withStripped = true;
-
-    /* style */
-    var __vue_inject_styles__$3 = undefined;
-    /* scoped */
-    var __vue_scope_id__$3 = undefined;
-    /* module identifier */
-    var __vue_module_identifier__$3 = undefined;
-    /* functional template */
-    var __vue_is_functional_template__$3 = false;
-    /* style inject */
-    
-    /* style inject SSR */
-    
-    /* style inject shadow dom */
-    
-
-    
-    var __vue_component__$3 = normalizeComponent(
-      { render: __vue_render__$3, staticRenderFns: __vue_staticRenderFns__$3 },
-      __vue_inject_styles__$3,
-      __vue_script__$3,
-      __vue_scope_id__$3,
-      __vue_is_functional_template__$3,
-      __vue_module_identifier__$3,
-      false,
-      undefined,
-      undefined,
-      undefined
-    );
+  var store = new Vuex__default.Store({});
 
   Vue.use(BootstrapVue);
 
-  Vue.component(__vue_component__.name, __vue_component__);
-  Vue.component(__vue_component__$1.name, __vue_component__$1);
-  Vue.component(__vue_component__$2.name, __vue_component__$2);
-  Vue.component(__vue_component__$3.name, __vue_component__$3);
-
-  var index = new Vue({ store: store }).$mount('app');
+  var index = new Vue({
+    el: '#app',
+    store: store,
+    components: { App: __vue_component__ }
+  });
 
   exports.default = index;
 
