@@ -1,7 +1,7 @@
 {
-  "name": "@maileryio/mailery-backend-assets",
+  "name": "@maileryio/mailery-assets",
   "version": "1.0.2",
-  "description": "Assets for Mailery backend module",
+  "description": "Assets for Mailery Platform",
   "license": "BSD-3-Clause",
   "main": "dist/main.umd.js",
   "module": "dist/main.esm.js",
@@ -65,10 +65,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/maileryio/mailery-backend-assets.git"
+    "url": "git+https://github.com/maileryio/mailery-assets.git"
   },
   "bugs": {
-    "url": "https://github.com/maileryio/mailery-backend-assets/issues"
+    "url": "https://github.com/maileryio/mailery-assets/issues"
   },
-  "homepage": "https://github.com/maileryio/mailery-backend-assets#readme"
+  "homepage": "https://github.com/maileryio/mailery-assets#readme"
 }

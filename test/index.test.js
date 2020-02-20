@@ -1,7 +1,7 @@
 'use strict';
 import { expect } from 'chai';
 
-describe('mailery-backend-assets', () => {
+describe('mailery-assets', () => {
   before(() => {
   });
 
@@ -14,7 +14,7 @@ describe('mailery-backend-assets', () => {
   afterEach(() => {
   });
 
-  it('should render mailery-backend-assets on mount', () => {
+  it('should render mailery-assets on mount', () => {
     expect(true).to.be.true;
     expect(false).to.be.false;
     expect(undefined).to.be.undefined;
