@@ -79,6 +79,33 @@ body {
   box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
 }
 
+.navbar {
+  .dropdown-submenu {
+    position: relative;
+
+    .menu-caret {
+      margin-left: 10px;
+
+      &::before {
+        position: absolute;
+      }
+    }
+
+    &>.dropdown-menu {
+      top: 0;
+      left: 100%;
+      margin-top: -6px;
+      margin-left: -1px;
+    }
+
+    &:hover {
+      &>.dropdown-menu {
+        display: block;
+      }
+    }
+  }
+}
+
 /*
  * Footer
  */
