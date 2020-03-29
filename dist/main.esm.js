@@ -1,6 +1,6 @@
 import BootstrapVue from 'bootstrap-vue';
 import Vue from 'vue';
-import Vuex, { mapGetters } from 'vuex';
+import Vuex from 'vuex';
 
 var support = {
   searchParams: 'URLSearchParams' in self,
@@ -520,17 +520,19 @@ if (!self.fetch) {
 }
 
 //
+//
+//
+//
+//
+//
 
 var script = {
   name: 'app',
-  computed: Object.assign({}, mapGetters({
-      isSidebarOpened: 'sidebar/isOpened'
-    }),
-    {classObject: function classObject() {
-      return {
-        'sidebar-icon-only': !this.isSidebarOpened
-      };
-    }})
+  computed: {
+    classObject: function classObject() {
+      return {};
+    }
+  }
 };
 
 function normalizeComponent(template, style, script, scopeId, isFunctionalTemplate, moduleIdentifier /* server only */, shadowMode, createInjector, createInjectorSSR, createInjectorShadow) {

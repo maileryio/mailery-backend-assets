@@ -6,7 +6,7 @@
 
   BootstrapVue = BootstrapVue && BootstrapVue.hasOwnProperty('default') ? BootstrapVue['default'] : BootstrapVue;
   Vue = Vue && Vue.hasOwnProperty('default') ? Vue['default'] : Vue;
-  var Vuex__default = 'default' in Vuex ? Vuex['default'] : Vuex;
+  Vuex = Vuex && Vuex.hasOwnProperty('default') ? Vuex['default'] : Vuex;
 
   var support = {
     searchParams: 'URLSearchParams' in self,
@@ -526,17 +526,19 @@
   }
 
   //
+  //
+  //
+  //
+  //
+  //
 
   var script = {
     name: 'app',
-    computed: Object.assign({}, Vuex.mapGetters({
-        isSidebarOpened: 'sidebar/isOpened'
-      }),
-      {classObject: function classObject() {
-        return {
-          'sidebar-icon-only': !this.isSidebarOpened
-        };
-      }})
+    computed: {
+      classObject: function classObject() {
+        return {};
+      }
+    }
   };
 
   function normalizeComponent(template, style, script, scopeId, isFunctionalTemplate, moduleIdentifier /* server only */, shadowMode, createInjector, createInjectorSSR, createInjectorShadow) {
@@ -656,9 +658,9 @@
       undefined
     );
 
-  Vue.use(Vuex__default);
+  Vue.use(Vuex);
 
-  var store = new Vuex__default.Store({});
+  var store = new Vuex.Store({});
 
   Vue.use(BootstrapVue);
 
