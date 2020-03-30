@@ -6,7 +6,7 @@
 
 <script>
   export default {
-    name: 'app',
+    name: 'ui-app',
     computed: {
       classObject() {
         return {};
