@@ -7,3 +7,15 @@
 
 // custom styles
 @import 'layout.scss';
+@import 'table.scss';
+
+.dropdown-item-custom-link > .b-dropdown-text {
+  margin: 0;
+  padding: 0;
+}
+
+.dropdown-item-custom-link .btn-link {
+  width: 100%;
+  padding: .25rem 1.5rem;
+  text-align: left;
+}

@@ -533,7 +533,7 @@
   //
 
   var script = {
-    name: 'app',
+    name: 'ui-app',
     computed: {
       classObject: function classObject() {
         return {};
@@ -658,17 +658,87 @@
       undefined
     );
 
+  //
+  //
+  //
+  //
+  //
+  //
+
+  var toggle = function (item) {
+    var href = item.getAttribute('href');
+    item.querySelector('.menu-arrow').classList.toggle('rotate');
+    document.querySelector(href).classList.toggle('show');
+  };
+
+  var script$1 = {
+    name: 'ui-sidebar',
+    mounted: function mounted() {
+      document.querySelectorAll('.nav-item.active a[data-toggle="collapse"]').forEach(toggle);
+
+      document.querySelectorAll('.sidebar a[data-toggle="collapse"]').forEach(function (item) {
+        item.addEventListener('click', function () { return toggle(item); });
+      });
+    },
+    computed: {
+      classObject: function classObject() {
+        return {};
+      }
+    }
+  };
+
+  /* script */
+  var __vue_script__$1 = script$1;
+
+  /* template */
+  var __vue_render__$1 = function() {
+    var _vm = this;
+    var _h = _vm.$createElement;
+    var _c = _vm._self._c || _h;
+    return _c("div", { class: _vm.classObject }, [_vm._t("default")], 2)
+  };
+  var __vue_staticRenderFns__$1 = [];
+  __vue_render__$1._withStripped = true;
+
+    /* style */
+    var __vue_inject_styles__$1 = undefined;
+    /* scoped */
+    var __vue_scope_id__$1 = undefined;
+    /* module identifier */
+    var __vue_module_identifier__$1 = undefined;
+    /* functional template */
+    var __vue_is_functional_template__$1 = false;
+    /* style inject */
+    
+    /* style inject SSR */
+    
+    /* style inject shadow dom */
+    
+
+    
+    var __vue_component__$1 = normalizeComponent(
+      { render: __vue_render__$1, staticRenderFns: __vue_staticRenderFns__$1 },
+      __vue_inject_styles__$1,
+      __vue_script__$1,
+      __vue_scope_id__$1,
+      __vue_is_functional_template__$1,
+      __vue_module_identifier__$1,
+      false,
+      undefined,
+      undefined,
+      undefined
+    );
+
   Vue.use(Vuex);
 
   var store = new Vuex.Store({});
 
   Vue.use(BootstrapVue);
 
-  var index = new Vue({
-    el: '#app',
-    store: store,
-    components: { App: __vue_component__ }
-  });
+  Vue.component(__vue_component__.name, __vue_component__);
+  Vue.component(__vue_component__$1.name, __vue_component__$1);
+
+  var index = new Vue({ el: '#app', store: store });
 
   exports.default = index;
 
