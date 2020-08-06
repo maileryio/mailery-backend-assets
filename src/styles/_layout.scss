@@ -33,6 +33,10 @@ $nav-link-active-color: #007bff;
 
     .menu-icon {
       color: lighten($nav-link-color, 25%);
+
+      &:before {
+        font-size: 1.2rem;
+      }
     }
 
     .menu-arrow {
